@@ -1,4 +1,4 @@
-# Survivor Recovery Boost 0.1.0 — 第三个独立Mod
+# Survivor Recovery Boost 0.1.0
 
 每秒自动回血，并加快打包、除颤和扶人。默认真人和Bot幸存者同时生效，使用游戏原本的物品、救援判定和消耗规则。
 
