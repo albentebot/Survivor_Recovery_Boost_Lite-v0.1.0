@@ -48,20 +48,4 @@ Steam/steamapps/common/Left 4 Dead 2/left4dead2/addons/
 - **没有聊天命令**，无法在游戏内开关或调整参数。要修改数值需直接编辑 `core_new.nut` 中的常量并重新打包 VPK。
 - 其他回血 Mod 会叠加效果；其他动作加速 Mod 或自定义地图可能改写相同时长。首次测试建议只开启本 Mod。
 
-## 验证与游戏检查
-
-开发侧已完成：
-
-- Squirrel 3.2 语法检查。
-- 模拟回血逻辑、临时血重叠、生命上限、倒地 / 挂边 / 死亡 / 感染者排除。
-- 模拟 Convar 应用、重复启动单一计时器、Thinker 生命周期。
-
-尚未游戏实测。建议先在本地战役受伤，观察每 3 秒回血；测试急救包和扶人时间，检查物品正常消耗、中断后不会凭空完成。再测试药物临时血、倒地暂停、换图等。
-
-出现问题请保留控制台 `[RecoveryBoost]` 输出、地图名和其他 Mod 列表。
-
-## 源码
-
-源码在 `source`；运行 `python build_vpk.py` 重新打包，需要 Python3，无第三方打包依赖。源码为 GPL-3.0-or-later，许可证随附。
-
 接口参考：[Valve VScript API](https://developer.valvesoftware.com/wiki/Left_4_Dead_2/Scripting/Script_Functions)、[游戏变量列表](https://github.com/Stabbath/L4D2-Decompiled/blob/master/Misc%20Stuff/commoncvars.txt)。没有内置其他作者的游戏 Mod 或外部运行库。
