@@ -4,13 +4,13 @@
 
 这是精简版（Lite）：**没有配置文件、聊天命令、Convar 恢复、除颤器加速和异常熔断**。想改数值请直接编辑 `core_new.nut` 中的常量，重新打包 VPK。
 
-| 功能 | 默认值 |
-| --- | --- |
-| 自动回血 | 每 3 秒回复 1 点实血，上限 80（不超过玩家最大生命值） |
-| 急救包 | 使用读条 3 秒，自用和治疗队友都适用 |
-| 扶起倒地队友 | 读条 3 秒 |
+|Mod名| 功能 | 默认值 |
+|---| --- | --- |
+|automatic_health_regeneration| 自动回血 | 每 3 秒回复 1 点实血，上限 80（不超过玩家最大生命值） |
+|medkit_and_revive_acceleration| 急救包加速 | 使用读条 3 秒，自用和治疗队友都适用 |
+|medkit_and_revive_acceleration| 扶起倒地队友加速 | 读条 3 秒 |
 
-本版本不包含除颤器加速，可查看独立版：[instant_defibrillator](https://github.com/albentebot/instant_defibrillator)。
+本版本将原来的四个合并功能分开为独立三个Mod，本页面不包含除颤器加速，可查看独立版：[instant_defibrillator](https://github.com/albentebot/instant_defibrillator)。
 
 ## 安装
 

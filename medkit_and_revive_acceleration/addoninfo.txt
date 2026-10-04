@@ -1,0 +1,8 @@
+"AddonInfo"
+{
+    "addonSteamAppID" "550"
+    "addonversion" "0.1.0"
+    "addontitle" "Survivor Recovery Boost Lite"
+    "addonauthor" "team_imu"
+    "addonDescription" "Host-side coop/realism health regeneration and faster medkits, defibrillators and revives for humans and bots. Standalone VScript; experimental."
+}
