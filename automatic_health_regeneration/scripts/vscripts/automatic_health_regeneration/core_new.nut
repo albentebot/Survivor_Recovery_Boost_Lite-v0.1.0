@@ -91,7 +91,6 @@
 // ----------------------------------------------------------------------------
 
 // 停止 Lite Mod：注销 Thinker 实体。
-// 注意：Lite 版**不恢复**四个 Convar —— 应用后就留在那，直到地图切换或服务器重启。
 // 完整版会在 Stop 时把值还原为旧值并避免覆盖地图/其他 Mod 的后续修改。
 ::RecoveryBoost.Stop <- function() {
     Active = false;
@@ -108,8 +107,6 @@
 
     local mode = Director.GetGameMode();
     if (mode != "coop" && mode != "realism") return;
-
-    ApplySpeeds(); // 应用四个速度相关 Convar
 
     // 创建一个 info_target 脚本实体作为 Think 驱动
     // Lite 版用固定 targetname "recovery_boost_thinker"，完整版用 DoUniqueString 避免命名冲突
