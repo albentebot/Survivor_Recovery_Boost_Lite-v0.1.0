@@ -7,8 +7,7 @@
 // 想改数值直接改下面 ::RecoveryBoost 里的常量，重新打包 VPK 即可。
 //
 // 功能一览：
-//   1) 每 RegenInterval 秒给所有幸存者回复 RegenAmount 点实血（上限 RegenCap）
-//   2) 硬编码加速两个引擎 Convar：急救包 / 扶人
+//   每 RegenInterval 秒给所有幸存者回复 RegenAmount 点实血（上限 RegenCap）
 //
 // 仅在 coop（普通战役）和 realism（写实）模式下生效。
 // ============================================================================

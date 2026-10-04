@@ -1,12 +1,12 @@
 # Survivor Recovery Boost Lite
 
-每 3 秒自动回复 1 点实血（上限 80），并加速急救包使用和扶起倒地队友。真人 / Bot 幸存者同时生效，使用游戏原本的物品和救援判定。仅在 `coop`（普通战役）和 `realism`（写实）模式下启用。
+每 3 秒自动回复 1 点实血（上限 60），并加速急救包使用和扶起倒地队友。真人 / Bot 幸存者同时生效，使用游戏原本的物品和救援判定。仅在 `coop`（普通战役）和 `realism`（写实）模式下启用。
 
 这是精简版（Lite）：**没有配置文件、聊天命令、Convar 恢复、除颤器加速和异常熔断**。想改数值请直接编辑 `core_new.nut` 中的常量，重新打包 VPK。
 
 |Mod名| 功能 | 默认值 |
 |---| --- | --- |
-|automatic_health_regeneration| 自动回血 | 每 3 秒回复 1 点实血，上限 80（不超过玩家最大生命值） |
+|automatic_health_regeneration| 自动回血 | 每 3 秒回复 1 点实血，上限 60（不超过玩家最大生命值） |
 |medkit_and_revive_acceleration| 急救包加速 | 使用读条 3 秒，自用和治疗队友都适用 |
 |medkit_and_revive_acceleration| 扶起倒地队友加速 | 读条 3 秒 |
 
@@ -14,19 +14,19 @@
 
 ## 安装
 
-退出游戏，把 `survivor_recovery_boost.vpk` 放到：
+退出游戏，把 `automatic_health_regeneration.vpk`和 `medkit_and_revive_acceleration.vpk` 放到：
 
 ```text
-Steam/steamapps/common/Left 4 Dead 2/left4dead2/addons/
+/steamapps/common/Left 4 Dead 2/left4dead2/addons/
 ```
 
-在“附加内容”启用 **Survivor Recovery Boost (Regen and Fast Actions)**。开启单机战役 / 写实，或自己作为房主的本地服务器。
+在“附加内容”启用 **Automatic Health Regeneration** 和 **Medkit and Revive Acceleration**。开启单机战役 / 写实，或自己作为房主的本地服务器。
 
 只安装一份本 Mod 的 VPK，源码文件夹无需放入游戏。不需要 SourceMod、Metamod 或其他脚本库。
 
 ## 回血规则
 
-- 回复实血。上限取配置上限（80）和玩家最大生命值中的较小值，不会降低其他 Mod 已给出的超额血量。
+- 回复实血。上限取配置上限（60）和玩家最大生命值中的较小值，不会降低其他 Mod 已给出的超额血量。
 - 临时血和实血相加将超过上限时，只把本次新增实血重叠的临时血扣掉。例如 50 实血 + 50 临时血会变为 51 实血 + 49 临时血，临时血仍按游戏规则衰减。
 - 死亡、濒死、倒地、挂边时暂停回血；不会自动站起、复活或清除黑白状态。被特感控制但仍站立时继续回血。
 - 每 0.1 秒检查一次，每 3 秒触发一次回血。游戏卡顿后不会一次补发漏掉的所有回血。
